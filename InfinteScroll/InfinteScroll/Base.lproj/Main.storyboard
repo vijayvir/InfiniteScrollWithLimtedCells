@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="InfinteScroll" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O5D-ed-PhQ">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DWz-2u-iCg">
+                                        <rect key="frame" x="240" y="11" width="121" height="21"/>
+                                        <string key="text" base64-UTF8="YES">
+SW5maW5pdGUgEFNjcm9sbCAgA
+</string>
+                                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.5" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="DWz-2u-iCg" firstAttribute="centerY" secondItem="O5D-ed-PhQ" secondAttribute="centerY" id="BJh-cM-Yeb"/>
+                                    <constraint firstAttribute="height" constant="44" id="fAk-em-lca"/>
+                                    <constraint firstItem="DWz-2u-iCg" firstAttribute="centerX" secondItem="O5D-ed-PhQ" secondAttribute="centerX" id="hOa-Wu-kMW"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="206" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="gAe-zI-zZb" customClass="InfiniteTable" customModule="InfinteScroll" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="43" width="600" height="557"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="InfinteTableViewCell" rowHeight="206" id="oyy-D4-per" customClass="InfinteTableViewCell" customModule="InfinteScroll" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="600" height="206"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="oyy-D4-per" id="BVi-8q-EPw">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="205"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2sL-jS-OKD">
+                                                    <rect key="frame" x="278" y="92" width="44" height="22"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" red="0.37741191275167785" green="0.60934878355704702" blue="0.65661703020134232" alpha="1" colorSpace="calibratedRGB"/>
+                                            <constraints>
+                                                <constraint firstItem="2sL-jS-OKD" firstAttribute="centerX" secondItem="BVi-8q-EPw" secondAttribute="centerX" id="RYV-hY-SiD"/>
+                                                <constraint firstItem="2sL-jS-OKD" firstAttribute="centerY" secondItem="BVi-8q-EPw" secondAttribute="centerY" id="lXi-Fi-B4L"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="lblDesc" destination="2sL-jS-OKD" id="p6W-Jy-neV"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="Umc-27-riq"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="jW8-p5-vgi"/>
+                                </connections>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="see scroll ➔" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o9k-Rk-2iG">
+                                <rect key="frame" x="501" y="290" width="92" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="o9k-Rk-2iG" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="KAx-Rd-CNU"/>
+                            <constraint firstItem="O5D-ed-PhQ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="OS6-d7-RWO"/>
+                            <constraint firstItem="O5D-ed-PhQ" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Uru-Ua-zPV"/>
+                            <constraint firstAttribute="trailing" secondItem="O5D-ed-PhQ" secondAttribute="trailing" id="ZSY-5L-Za5"/>
+                            <constraint firstItem="gAe-zI-zZb" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="fZk-Yo-fgq"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="gAe-zI-zZb" secondAttribute="bottom" id="h6K-ca-Vft"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="o9k-Rk-2iG" secondAttribute="trailing" constant="-13" id="m5e-ld-8nR"/>
+                            <constraint firstAttribute="trailing" secondItem="gAe-zI-zZb" secondAttribute="trailing" id="rfE-KU-6xr"/>
+                            <constraint firstItem="gAe-zI-zZb" firstAttribute="top" secondItem="O5D-ed-PhQ" secondAttribute="bottom" constant="-1" id="xF6-ei-dmt"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="lblScrollIndicator" destination="o9k-Rk-2iG" id="t0d-z1-1So"/>
+                        <outlet property="tableview" destination="gAe-zI-zZb" id="0hr-ED-8tQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="467" y="429"/>
+        </scene>
+    </scenes>
+</document>
